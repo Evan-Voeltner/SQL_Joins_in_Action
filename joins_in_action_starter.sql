@@ -24,10 +24,15 @@ select * from movies right join users on movie_id = favorite_movie_id;
 -- Do a inner join to get only the rows from the movies tables that have matching rows in the users tables.
 -- EXPECTED RESULT: 14 Rows Returned
 
+select * from movies inner join users on movie_id = favorite_movie_id;
 
 -- <<<<<<<<<<<<<<<<<<<<<< PROBLEM 4 >>>>>>>>>>>>>>>>>>>>>>>
 -- Determine which lead studio's movies are favorited by users the most.
 -- EXPECTED RESULT: Disney
+
+select * from movies inner join users on movie_id = favorite_movie_id;
+select * from movies inner join users on movie_id = favorite_movie_id group by count(lead_studio);
+select film from movies inner join users on movie_id = favorite_movie_id group by count(favorite_movie_id);
 
 
 -- <<<<<<<<<<<<<<<<<<<<<< PROBLEM 5 >>>>>>>>>>>>>>>>>>>>>>>
